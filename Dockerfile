@@ -45,7 +45,7 @@ COPY files/nsswitch.conf /etc/nsswitch.conf
 COPY --from=certs /ca-certificates.crt /kaniko/ssl/certs/
 ENV HOME /root
 ENV USER root
-ENV PATH /usr/bin/usr/local/bin:/kaniko
+ENV PATH /bin:/usr/bin:/usr/local/bin:/kaniko
 ENV SSL_CERT_DIR=/kaniko/ssl/certs
 
 ENTRYPOINT ["/kaniko/executor"]
